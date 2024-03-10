@@ -3,6 +3,7 @@
 ## Installation
 
 - Clone the repository
+- Run `npm i` and `npm i -g typescript tsx` to install all dependences
 - Change `.envExemple` file to `.env`
 - Enter your bot token and bot id in `.env` file
 
