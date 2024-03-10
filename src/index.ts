@@ -17,7 +17,7 @@ for (const folder of commandFolders) {
   	const commandsPath = path.join(foldersPath, folder);
   	const commandFiles = fs
     	.readdirSync(commandsPath)
-    	.filter((file) => file.endsWith(".ts"));
+    	.filter((file) => file.endsWith(".ts") || file.endsWith(".js"));
 
   	for (const file of commandFiles) {
     	const filePath = path.join(commandsPath, file);
@@ -52,7 +52,7 @@ const rest = new REST().setToken(process.env.DISCORD_TOKEN ? process.env.DISCORD
 const eventsPath = path.join(__dirname, "events");
 const eventFiles = fs
   	.readdirSync(eventsPath)
-  	.filter((file) => file.endsWith(".ts"));
+  	.filter((file) => file.endsWith(".ts") || file.endsWith(".js"));
 
 for (const file of eventFiles) {
   	const filePath = path.join(eventsPath, file);
