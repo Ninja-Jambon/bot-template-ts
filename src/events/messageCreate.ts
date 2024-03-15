@@ -1,5 +1,6 @@
 import { Events, Message } from "discord.js";
-module.exports = {
+
+export default {
     name: Events.MessageCreate,
     async execute(message: Message) {
         //console.log(message.content);
